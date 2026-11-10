@@ -1,0 +1,60 @@
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><element><id>UMLClass</id><coordinates><x>68</x><y>100</y><w>60</w><h>30</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+ILiberable
+--
++ liberarse(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>318</x><y>95</y><w>65</w><h>30</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IRehabilitable
+--
++ rehabilitar(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>553</x><y>45</y><w>60</w><h>45</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+EstadoSalud
+--
+CRITICO
+EN_RECUPERACION
+ESTABLE</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>698</x><y>50</y><w>140</w><h>25</h></coordinates><panel_attributes>AnimalDuplicadoException
+--
++ AnimalDuplicadoException(mensaje: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>633</x><y>195</y><w>200</w><h>80</h></coordinates><panel_attributes>CentroRescate
+--
+- nombre: String
+- animales: List&lt;Animal&gt;
+--
++ CentroRescate(nombre: String)
++ getNombre(): String
++ agregarAnimal(animal: Animal): void
++ obtenerAnimales(): List&lt;Animal&gt;
++ filtrarPorEstado(estado: EstadoSalud): List&lt;Animal&gt;
++ obtenerAnimalesConCostoMaximo(maximo: double): List&lt;Animal&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>328</x><y>215</y><w>195</w><h>90</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Animal
+--
+- codigo: String
+- nombre: String
+- estadoSalud: EstadoSalud
+--
++ Animal(codigo: String, nombre: String, estadoSalud: EstadoSalud)
++ getCodigo(): String
++ getNombre(): String
++ getEstadoSalud(): EstadoSalud
+{abstract} + calcularCostoDiario(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>28</x><y>455</y><w>260</w><h>70</h></coordinates><panel_attributes>Ave
+--
+- envergaduraAlar: double
+--
++ Ave(codigo: String, nombre: String, estadoSalud: EstadoSalud, envergaduraAlar: double)
++ getEnvergaduraAlar(): double
++ calcularCostoDiario(): double
++ rehabilitar(): String
++ liberarse(): String
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>313</x><y>455</y><w>245</w><h>65</h></coordinates><panel_attributes>Mamifero
+--
+- peso: double
+--
++ Mamifero(codigo: String, nombre: String, estadoSalud: EstadoSalud, peso: double)
++ getPeso(): double
++ calcularCostoDiario(): double
++ rehabilitar(): String
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>598</x><y>450</y><w>245</w><h>70</h></coordinates><panel_attributes>Reptil
+--
+- longitud: double
+--
++ Reptil(codigo: String, nombre: String, estadoSalud: EstadoSalud, longitud: double)
++ getLongitud(): double
++ calcularCostoDiario(): double
++ liberarse(): String
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>63</x><y>125</y><w>20</w><h>340</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>20;10;10;660</additional_attributes></element><element><id>Relation</id><coordinates><x>98</x><y>100</y><w>230</w><h>365</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>440;10;10;710</additional_attributes></element><element><id>Relation</id><coordinates><x>248</x><y>125</y><w>85</w><h>340</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>150;10;140;210;20;210;10;530;140;530;140;660</additional_attributes></element><element><id>Relation</id><coordinates><x>108</x><y>130</y><w>545</w><h>330</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;390;1070;380;1070;640</additional_attributes></element><element><id>Relation</id><coordinates><x>518</x><y>280</y><w>110</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;200;340</additional_attributes></element><element><id>Relation</id><coordinates><x>438</x><y>300</y><w>15</w><h>165</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>173</x><y>275</y><w>165</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>310;10;10;360</additional_attributes></element><element><id>Relation</id><coordinates><x>453</x><y>65</y><w>110</w><h>160</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>200;10;10;10;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>573</x><y>70</y><w>140</w><h>185</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>120;350;10;350;10;190;260;190;260;10</additional_attributes></element></diagram>
