@@ -1,0 +1,57 @@
+<diagram program="umletino" version="15.1"><zoom_level>4</zoom_level><element><id>UMLClass</id><coordinates><x>224</x><y>204</y><w>92</w><h>52</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Robot
+--
+-numeroSerie: String
+-fabricante: String
+-prioridad: Prioridad
+-baterias: Int
+--
++abstract calcularConsumo(): Int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>208</x><y>496</y><w>60</w><h>24</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IServiciable
+--
++ejecutarServicio(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>24</x><y>372</y><w>232</w><h>48</h></coordinates><panel_attributes>RobotLimpieza
+--
+-superficie: Int
+--
++robotLimpieza(numeroSerie: String, fabricante: String, prioridad: String, bateria: Int, superficie: Int)
++getSuperficie(): Int
++calcularConsumo(): Int
++generarDiagnostico(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>684</x><y>340</y><w>104</w><h>48</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IDiagnosticable
+--
++generarDiagnostico(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>336</x><y>340</y><w>252</w><h>48</h></coordinates><panel_attributes>RobotVigilancia
+--
+-cantidadCamaras: Int
+--
++RobotVigilancia((numeroSerie: String, fabricante: String, prioridad: String, bateria: Int, cantidadCamaras: Int)
++getCantidadCAmaras(): Int
++calcularConsumo(): Int
++generarDiagnostico(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>344</x><y>400</y><w>244</w><h>52</h></coordinates><panel_attributes>RobotReparto
+--
+-capacidadCarga: Int
+--
++RobotReparto(numeroSerie: String, fabricante: String, prioridad: String, bateria: Int, capacidadCArga: Int)
++getCapacidadCarga(): Int
++calcularConsumo(): Int
++ejecutarServicio(): void
++generarDiagnostico(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>552</x><y>200</y><w>152</w><h>68</h></coordinates><panel_attributes>FlotaRobots
+--
+-nombre: String
+-robots: List&lt;Robot&gt;
+--
++FloatRobots(nombre: String)
++getNombre(): String
++agregarRobot(robot: Robot): void
++obtenerRobots(): List&lt;Robot&gt;
++filtrarPorPrioridad(prioridad: Prioridad): List&lt;Robot&gt;
++obtenerRobotsConConsumoMaximo(maximo: Int): List&lt;Robot&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>108</y><w>60</w><h>36</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Prioridad
+--
+BAJA
+MEDIA
+ALTA</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>596</x><y>128</y><w>116</w><h>28</h></coordinates><panel_attributes>RobotDuplicationException
+--
++RobotDuplicationException(mensaje: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>116</y><w>156</w><h>108</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>370;10;10;250</additional_attributes></element><element><id>Relation</id><coordinates><x>556</x><y>136</y><w>48</w><h>72</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;160;10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>204</y><w>64</w><h>176</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;10;10;420</additional_attributes></element><element><id>Relation</id><coordinates><x>268</x><y>252</y><w>84</w><h>196</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;470;190;470</additional_attributes></element><element><id>Relation</id><coordinates><x>296</x><y>252</y><w>48</w><h>128</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;300;100;300</additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>224</y><w>248</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;600;10</additional_attributes></element><element><id>Relation</id><coordinates><x>184</x><y>416</y><w>32</w><h>100</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>60;230;10;230;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>264</x><y>448</y><w>112</w><h>64</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;140;260;140;260;10</additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>364</y><w>108</w><h>12</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>250;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>384</y><w>160</w><h>60</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>380;10;380;130;10;130</additional_attributes></element></diagram>
